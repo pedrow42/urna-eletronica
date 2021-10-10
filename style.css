@@ -1,0 +1,151 @@
+@keyframes pisca{
+    0%{opacity: .2}
+    50%{opacity: 1}
+    100%{opacity: .2}
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.urna{
+    background-color: #dbd5c9;
+    padding: 30px;
+    display: flex;
+}
+.screen{
+    width: 500px;
+    height: 320px;
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1);
+
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid #555;
+}
+
+/*lado direito da urna*/
+.keyboard{
+    margin-left: 30px;
+    background-color: #403A3A;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.keyboard--line{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: flex-end;
+}
+.keyboard--button{
+    width: 75px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px #555;
+}
+.keyboard--button.zero{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.keyboard--button.branco{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+}
+.keyboard--button.corrige{
+    background-color: #f09046;
+    color: #000;
+    font-size: 15px;
+}
+.keyboard--button.confirma{
+    background-color: #48c079;
+    color: #000;
+    font-size: 15px;
+
+    height: 50px;
+    width: 90px;
+}
+
+/*lado esquerdo da urna*/
+.top-screen{
+    flex: 1;
+    display: flex;
+}
+.bottom-screen{
+    height: 50px;
+    font-size: 14px;
+    border-top: 2px solid #000;
+}
+.bottom-screen p{
+    margin-left: 10px;
+}
+.top--left{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-left: 10px;
+}
+.top--right{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.candidates{
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+}
+.candidates img{
+    width: 100%;
+    max-height: 118px;
+}
+.candidates.small{
+    width: 80%;
+    font-size: 14px;
+}
+.d-2{
+    text-align: center;
+}
+.d-3{
+    display: flex;
+}
+.d-4{
+    line-height: 30px;
+}
+.aviso{
+    font-size: 40px;
+    font-weight: bold;
+}
+.number{
+    width: 30px;
+    height: 40px;
+    border: 1px solid #000;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+}
+.pisca{
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

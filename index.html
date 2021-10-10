@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="etapas.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="urna">
+        <div class="screen">
+            <div class="top-screen">
+                <div class="top--left">
+                    <div class="d-1">
+                        <span>SEU VOTO PARA</span>
+                    </div>
+                    <div class="d-2">
+                        <span></span>
+                    </div>
+                    <div class="d-3"></div>
+                    <div class="d-4">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="top--right">
+                    <div class="candidates">
+                        <img src="/images/dog1.webp">
+                        <span></span>
+                    </div>
+                    <div class="candidates small">
+                        <img src="/images/dog2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-screen">
+                <p>Aperte a tecla:<br/>
+                CONFIRMA para CONFIRMAR este voto<br/>
+                CORRIGE para REINICIAR este voto
+                </p>
+            </div>
+        </div>
+
+        <div class="keyboard">
+            <div class="keyboard--line">
+                <div class="keyboard--button">1</div>
+                <div class="keyboard--button">2</div>
+                <div class="keyboard--button">3</div>
+                <div class="keyboard--button">4</div>
+                <div class="keyboard--button">5</div>
+                <div class="keyboard--button">6</div>
+                <div class="keyboard--button">7</div>
+                <div class="keyboard--button">8</div>
+                <div class="keyboard--button">9</div>
+                <div class="keyboard--button zero">0</div>
+                <div class="keyboard--button branco" onclick="branco()">BRANCO</div>
+                <div class="keyboard--button corrige" onclick="corrige()">CORRIGE</div>
+                <div class="keyboard--button confirma" onclick="confirma()">CONFIRMA</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
